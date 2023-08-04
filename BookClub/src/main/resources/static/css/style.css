@@ -1,0 +1,48 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+
+body {
+	margin: 0 auto;
+	width: 50%;
+	background: #0F2027;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: 'Handjet', cursive;
+}
+
+.wrapper {
+	justify-content: space-around;
+}
+
+/* Inset, by Dan Eden */
+
+hr.style-six {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+	text-align: center;
+    color: blue;
+}
+
+.card {
+	margin: 50px;
+}
+
+.form-group {
+	padding: 10%;
+}
+
+.error {
+	color: red;
+	display: block;
+	margin-top: 4px;
+}
+
+.input-container {
+	display:flex;
+	flex-direction: column;
+}
