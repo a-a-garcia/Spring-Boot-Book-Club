@@ -27,8 +27,32 @@
 					<a href="/books/new">+ Add a book to your shelf!</a>
 				</div>
 			</div>
-			<div class="card-body">	
-				<p>This is your dashboard. Nothing to see here yet.</p>
+			<div class="card-body">
+				<c:if test="${not empty errorMessage}">
+				    <div class="error">
+				        ${errorMessage}
+				    </div>
+				</c:if>
+				<table class="table table-dark">
+				  <thead>
+				    <tr>
+				      <th scope="col">ID</th>
+				      <th scope="col">Title</th>
+				      <th scope="col">Author Name</th>
+				      <th scope="col">Posted By</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	<c:forEach var="book" items="${allBooks}">
+					    <tr>
+					      <th scope="row"><c:out value="${book.id}"></c:out></th>
+					      <td><a href="books/${book.id}"><c:out value="${book.title}"></c:out></a></td>
+					      <td><c:out value="${book.author}"></c:out></td>
+					      <td><c:out value="${book.user.userName}"></c:out></td>
+					    </tr>
+					</c:forEach>
+				  </tbody>
+				</table>
 			</div>
 		</div>	
 	</div>
